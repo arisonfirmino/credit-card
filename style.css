@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+}
+
+.container {
+    background: #353535;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: 380px;
+    color: #fff;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    background-image: url('images/background.png');
+    position: absolute;
+    border: 1px solid #1fbe5a;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.mastercard {
+    width: 85px;
+    top: 15px;
+    left: 10px;
+    position: absolute;
+}
+
+.chip {
+    width: 50px;
+    top: 20px;
+    left: 105px;
+    position: absolute;
+}
+
+.front > h1 {
+    font-size: 10px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #00000091;
+    top: 355px;
+    left: 170px;
+    position: absolute;
+    color: white;
+}
+
+.front > h2 {
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px #00000091;
+    left: 30px;
+    top: 220px;
+    position: absolute;
+    color: white;
+}
+
+.back {
+    background-image: url('images/back-background.png');
+    transform: rotateY(180deg);
+}
+
+.contactless {
+    position: absolute;
+    width: 20px;
+    top: 20px;
+    left: 210px;
+}
+
+.back > h1 {
+    font-size: 9px;
+    font-weight: normal;
+    top: 20px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.back > h2 {
+    font-size: 7px;
+    font-weight: normal;
+    top: 35px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.back > h3 {
+    font-size: 9px;
+    font-weight: normal;
+    top: 60px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.back > h4 {
+    font-size: 7px;
+    font-weight: normal;
+    top: 75px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.back > h5 {
+    font-size: 9px;
+    font-weight: normal;
+    top: 100px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.back > h6 {
+    font-size: 7px;
+    font-weight: normal;
+    top: 115px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.card-number > h1 {
+    font-size: 18px;
+    font-weight: normal;
+    top: 210px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.card-number > h2 {
+    font-size: 13px;
+    top: 250px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.card-number > h3 {
+    font-size: 9px;
+    font-weight: normal;
+    top: 280px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.card-number > h4 {
+    font-size: 13px;
+    top: 295px;
+    left: 70px;
+    position: absolute;
+    color: white;
+}
+
+.card-number > h5 {
+    font-size: 9px;
+    font-weight: normal;
+    top: 280px;
+    left: 140px;
+    position: absolute;
+    color: white;
+}
+
+.card-number > h6 {
+    font-size: 13px;
+    top: 295px;
+    left: 140px;
+    position: absolute;
+    color: white;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(-180deg);
+}
